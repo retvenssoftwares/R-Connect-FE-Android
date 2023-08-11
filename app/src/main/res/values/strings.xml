@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ChannelManager</string>
+
+    <dimen name="edittextwidth">400dp</dimen>
+    <dimen name="HeadingSize">21dp</dimen>
+    <dimen name="SubHeadingSize">23dp</dimen>
+
+</resources>
