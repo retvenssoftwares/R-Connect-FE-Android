@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Authentication.LoginScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame1"
+        android:layout_width="700dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/secondarybackground"
+        >
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="World's Only One Stop Hotel Solution Software With AI"
+            android:textColor="@color/black"
+            android:textSize="@dimen/HeadingSize"
+            android:textFontWeight="700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat"
+            android:text="A Complete Suite of Hotel Solutions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SubHeadingSize"
+            android:textFontWeight="400"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="600dp"
+            android:layout_marginStart="80dp"
+            android:src="@drawable/vector_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="-35dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@+id/frame1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/primarybackground"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/logo_png"
+            android:layout_marginTop="75dp"
+            />
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Log in to your one stop
+Hotel Solution Software"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/auth_Code_layout"
+            android:layout_width="@dimen/edittextwidth"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:hint="Property Auth Code "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginTitle"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            android:layout_marginTop="40dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/auth_Code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_light"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username_layout"
+            android:layout_width="@dimen/edittextwidth"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:hint="Username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/auth_Code_layout"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            android:layout_marginTop="15dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_light"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_width="@dimen/edittextwidth"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:hint="Password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username_layout"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            android:layout_marginTop="15dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_light"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            app:layout_constraintTop_toBottomOf="@+id/password_layout"
+            app:layout_constraintEnd_toEndOf="@+id/password_layout"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/secondary"
+            android:textFontWeight="300"
+            android:fontFamily="@font/montserrat"
+            android:textSize="15dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/signIn_Card"
+            android:layout_width="@dimen/edittextwidth"
+            android:layout_height="45dp"
+            app:layout_constraintTop_toBottomOf="@+id/password_layout"
+            android:layout_marginTop="85dp"
+            android:backgroundTint="@color/primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_bold"
+                android:textSize="17dp"
+                android:textColor="@color/secondary"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/signIn_Card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            android:text="Or"
+            android:textSize="15dp"
+            />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/demo_card"
+            android:layout_width="@dimen/edittextwidth"
+            android:layout_height="45dp"
+            app:layout_constraintTop_toBottomOf="@+id/or"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="10dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/secondary"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Request for a demo"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_bold"
+                android:textSize="17dp"
+                android:textColor="@color/secondary"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
