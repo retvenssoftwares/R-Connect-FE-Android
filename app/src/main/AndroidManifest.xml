@@ -13,6 +13,33 @@
         android:theme="@style/Theme.ChannelManager"
         tools:targetApi="31">
         <activity
+            android:name=".OnBoarding.ChainHotel.ThirdOnboardingChainScreen"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding.ChainHotel.SecondOnboardingChainScreen"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding.SingleHotel.FinalOnboardingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding.SingleHotel.FourOnboardingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding.SingleHotel.ThirdOnboardingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding.SingleHotel.SecondOnboardingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding.FirstOnBoardingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Authentication.RequestDemoScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Authentication.ResetPasswordScreen"
+            android:exported="false" />
+        <activity
             android:name=".Authentication.LoginScreen"
             android:exported="false" />
         <activity

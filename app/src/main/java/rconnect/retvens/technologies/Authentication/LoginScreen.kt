@@ -1,5 +1,6 @@
 package rconnect.retvens.technologies.Authentication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import rconnect.retvens.technologies.R
@@ -13,7 +14,12 @@ class LoginScreen : AppCompatActivity() {
         bindingTab = ActivityLoginScreenBinding.inflate(layoutInflater)
         setContentView(bindingTab.root)
 
+        bindingTab.forgotPassText.setOnClickListener {
+            startActivity(Intent(this,ResetPasswordScreen::class.java))
+        }
 
-
+        bindingTab.demoCard.setOnClickListener {
+            startActivity(Intent(this,RequestDemoScreen::class.java))
+        }
     }
 }

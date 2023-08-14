@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         handler.postDelayed({
             startActivity(Intent(this,LoginScreen::class.java))
+            finish()
         },1000)
 
     }
