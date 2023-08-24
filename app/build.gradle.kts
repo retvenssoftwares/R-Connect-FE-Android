@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+
+
 android {
     namespace = "rconnect.retvens.technologies"
     compileSdk = 33
@@ -37,6 +39,8 @@ android {
     buildFeatures{
         viewBinding =  true
     }
+
+
 }
 
 dependencies {
@@ -50,5 +54,10 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //Country Code Picker
+
     implementation("com.hbb20:ccp:2.5.3")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

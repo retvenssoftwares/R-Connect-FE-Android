@@ -3,6 +3,7 @@ package rconnect.retvens.technologies.Authentication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import rconnect.retvens.technologies.Dashboard.DashboardActivity
 import rconnect.retvens.technologies.R
 import rconnect.retvens.technologies.databinding.ActivityLoginScreenBinding
 
@@ -20,6 +21,10 @@ class LoginScreen : AppCompatActivity() {
 
         bindingTab.demoCard.setOnClickListener {
             startActivity(Intent(this,RequestDemoScreen::class.java))
+        }
+
+        bindingTab.signInCard.setOnClickListener {
+            startActivity(Intent(this,DashboardActivity::class.java))
         }
     }
 }

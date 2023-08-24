@@ -8,6 +8,8 @@
     <color name="subtitle">#828282</color>
     <color name="primarybackground">#FFFFFF</color>
     <color name="secondarybackground">#F2F2F2</color>
+    <color name="pieChart1">#667483</color>
+    <color name="pieChart2">#272A3D</color>
 
 
 </resources>

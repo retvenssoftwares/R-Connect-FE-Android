@@ -25,6 +25,8 @@ class FirstOnBoardingScreen : AppCompatActivity() {
         }
 
 
+
+
         bindingTab.cardSingle.setOnClickListener {
 
             bindingTab.heading.text = "Tell us about your property"
