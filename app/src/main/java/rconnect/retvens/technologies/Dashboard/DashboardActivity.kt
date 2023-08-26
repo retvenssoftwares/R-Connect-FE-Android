@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import rconnect.retvens.technologies.Authentication.RatesAndInventory.DistributionsRatesFragment
 import rconnect.retvens.technologies.R
 import rconnect.retvens.technologies.databinding.ActivityDashboardBinding
 
@@ -27,6 +28,13 @@ class DashboardActivity : AppCompatActivity() {
 
         replaceFragment(DashboardFragment())
 
+        bindingTab.dashboardCard.setOnClickListener {
+            replaceFragment(DashboardFragment())
+        }
+
+        bindingTab.distributionCard.setOnClickListener {
+            replaceFragment(DistributionsRatesFragment())
+        }
 
         toggle = ActionBarDrawerToggle(this,bindingTab.drawerLayout,R.string.navigation_drawer_open,R.string.navigation_drawer_close)
         bindingTab.drawerLayout.addDrawerListener(toggle)

@@ -1,5 +1,6 @@
 package rconnect.retvens.technologies.Dashboard
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.Typeface
 import android.hardware.lights.Light
@@ -29,8 +30,13 @@ import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
+import rconnect.retvens.technologies.Dashboard.BookingNewsFragment.ArrivalsFragment
+import rconnect.retvens.technologies.Dashboard.BookingNewsFragment.CancellationsFragment
+import rconnect.retvens.technologies.Dashboard.BookingNewsFragment.DepartureFragment
 import rconnect.retvens.technologies.Dashboard.BookingNewsFragment.NewBookingFragment
+import rconnect.retvens.technologies.Dashboard.PropertyStatisticsFragment.BookingStatisticsFragment
 import rconnect.retvens.technologies.Dashboard.PropertyStatisticsFragment.OverviewFragment
+import rconnect.retvens.technologies.Dashboard.PropertyStatisticsFragment.RevenueFragment
 import rconnect.retvens.technologies.R
 import rconnect.retvens.technologies.databinding.FragmentDashboardBinding
 import rconnect.retvens.technologies.databinding.FragmentNewBookingBinding
@@ -58,6 +64,89 @@ class DashboardFragment : Fragment(), OnChartValueSelectedListener {
 
         lineChart()
         pieChart()
+
+        //Booking Fragments
+        bindingTab.cardBooking.setOnClickListener {
+            changeBookingFragment(1)
+        }
+
+        bindingTab.cardArrival.setOnClickListener {
+            changeBookingFragment(2)
+        }
+
+        bindingTab.cardDeparture.setOnClickListener {
+            changeBookingFragment(3)
+        }
+
+        bindingTab.cancellationsCard.setOnClickListener {
+            changeBookingFragment(4)
+        }
+
+        //Property Statistics
+        bindingTab.cardOverview.setOnClickListener {
+            changeStatisticsFragment(1)
+        }
+
+        bindingTab.cardRevenue.setOnClickListener {
+            changeStatisticsFragment(2)
+        }
+        bindingTab.cardStatistics.setOnClickListener {
+            changeStatisticsFragment(3)
+        }
+    }
+
+    private fun changeBookingFragment(value: Int) {
+        bindingTab.cardBooking.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+        bindingTab.cardDeparture.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+        bindingTab.cardArrival.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+        bindingTab.cancellationsCard.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+
+        when(value){
+            1 -> {
+                bindingTab.cardBooking.setCardBackgroundColor(Color.parseColor("#ACD037"))
+                replaceFragment(NewBookingFragment())
+            }
+
+            2-> {
+                bindingTab.cardArrival.setCardBackgroundColor(Color.parseColor("#ACD037"))
+                replaceFragment(ArrivalsFragment())
+            }
+
+            3->{
+                bindingTab.cardDeparture.setCardBackgroundColor(Color.parseColor("#ACD037"))
+                replaceFragment(DepartureFragment())
+            }
+            4->{
+                bindingTab.cancellationsCard.setCardBackgroundColor(Color.parseColor("#ACD037"))
+                replaceFragment(CancellationsFragment())
+            }
+        }
+    }
+
+    @SuppressLint("ResourceAsColor")
+    private fun changeStatisticsFragment(value:Int) {
+
+
+        bindingTab.cardOverview.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+        bindingTab.cardRevenue.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+        bindingTab.cardStatistics.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+
+
+        when (value){
+            1 ->{
+                bindingTab.cardOverview.setCardBackgroundColor(Color.parseColor("#ACD037"))
+                replaceDetailsFragment(OverviewFragment())
+            }
+            2-> {
+                bindingTab.cardRevenue.setCardBackgroundColor(Color.parseColor("#ACD037"))
+                replaceDetailsFragment(RevenueFragment())
+            }
+            3 -> {
+                bindingTab.cardStatistics.setCardBackgroundColor(Color.parseColor("#ACD037"))
+                replaceDetailsFragment(BookingStatisticsFragment())
+            }
+        }
+
     }
 
     private fun pieChart() {
