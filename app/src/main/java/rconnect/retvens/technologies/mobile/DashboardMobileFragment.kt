@@ -209,7 +209,7 @@ class DashboardMobileFragment : Fragment(), OnChartValueSelectedListener {
         pieChart.holeRadius = 58f
         pieChart.transparentCircleRadius = 61f
 
-//        pieChart.setDrawCenterText(false)
+        pieChart.setDrawCenterText(false)
 
         pieChart.rotationAngle = 0f
 // enable rotation of the chart by touch
@@ -241,9 +241,10 @@ class DashboardMobileFragment : Fragment(), OnChartValueSelectedListener {
         l.yOffset = 0f
 
 // entry label styling
-        pieChart.setEntryLabelColor(Color.WHITE)
+        pieChart.setEntryLabelColor(Color.GREEN)
 
-        pieChart.setEntryLabelTextSize(12f)
+        pieChart.setEntryLabelTextSize(10f)
+        pieChart.setDrawEntryLabels(false)
 
         setPieData(2,100f)
     }
