@@ -25,6 +25,8 @@ class DistributionsRatesFragment : Fragment() {
     private val currentDate = Calendar.getInstance(Locale.ENGLISH)
     private val dates = ArrayList<Date>()
     private lateinit var calenderAdapter: CalenderAdapter
+    private lateinit var ratesInventoryAdapter: RatesInventoryAdapter
+    private  var list:ArrayList<RatesInventoryDataClass> = ArrayList()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,15 +45,64 @@ class DistributionsRatesFragment : Fragment() {
 
 
         calenderAdapter = CalenderAdapter()
-        cal.add(Calendar.MONTH,1)
         setUpCalendar()
 
+        addRatesData()
 
 
         bindingTab.calenderRecycler.adapter = calenderAdapter
         calenderAdapter.notifyDataSetChanged()
 
+        bindingTab.ratesRecycler.layoutManager = LinearLayoutManager(requireContext())
+
+        ratesInventoryAdapter = RatesInventoryAdapter(requireContext(), list)
+        bindingTab.ratesRecycler.adapter = ratesInventoryAdapter
+        ratesInventoryAdapter.notifyDataSetChanged()
+
     }
+
+    private fun addRatesData() {
+        // Create dummy RoomDetailsData instances
+
+
+        for (i in 1..7) {
+            val roomDetailsList = ArrayList<RoomDetailsData>()
+            val roomDetails = RoomDetailsData(
+                roomType = "DELUXE ROOM",
+                roomPlan = "Deluxe WITH BREAKFAST (1.0000)",
+                day1Inventory = "5",
+                day1Price = "7002.00",
+                day2Inventory = "2",
+                day2Price = "5205.00",
+                day3Inventory = "0",
+                day3Price = "6000.00",
+                day4Inventory = "5",
+                day4Price = "6500.00",
+                day5Inventory = "2",
+                day5Price = "8000.00",
+                day6Inventory = "1",
+                day6Price = "6500.00",
+                day7Inventory = "10",
+                day7Price = "4000.00"
+            )
+            roomDetailsList.add(roomDetails)
+            roomDetailsList.add(roomDetails)
+            roomDetailsList.add(roomDetails)
+
+
+// Create dummy RatesInventoryDataClass instance
+            val ratesInventoryData = RatesInventoryDataClass(
+                otaName = "Agoda",
+                otaCode = "52521",
+                rateType = "Net",
+                currency = "INR",
+                roomDetails = roomDetailsList
+            )
+
+            list.add(ratesInventoryData)
+        }
+    }
+
 
     private fun setUpCalendar() {
         val calendarList = ArrayList<Calendar>() // Use a list of Calendar objects instead

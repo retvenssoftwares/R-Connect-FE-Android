@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/frame1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/secondary"
+        >
+
+        <TextView
+            android:id="@+id/ota_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agoda"
+            android:textSize="@dimen/headingText"
+            android:textColor="@color/primary"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/poppins_bold"
+            />
+
+        <TextView
+            android:id="@+id/ota_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 50079"
+            android:textSize="@dimen/headingText"
+            android:textColor="#E2E1E1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/ota_Name"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="5dp"
+            />
+
+        <TextView
+            android:id="@+id/channel_rate_type_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channel Rate Type :"
+            android:textSize="@dimen/headingText"
+            android:textColor="#E2E1E1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/ota_code"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="30dp"
+            />
+
+        <TextView
+            android:id="@+id/rate_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net"
+            android:textSize="@dimen/headingText"
+            android:textColor="#E2E1E1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/channel_rate_type_heading"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="5dp"
+            />
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/frame1"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/secondary"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/room_Type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DELUXE ROOM"
+                android:textSize="@dimen/headingText"
+                android:textColor="@color/secondary"
+                android:fontFamily="@font/poppins_bold"
+                />
+
+            <TextView
+                android:id="@+id/room_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Deluxe WITH BREAKFAST (1.0000)"
+                android:textSize="@dimen/subheadingText"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/secondary"
+                android:fontFamily="@font/poppins_medium"
+
+                />
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@id/frame1"
+        app:layout_constraintStart_toEndOf="@+id/card1"
+        app:cardCornerRadius="0dp"
+        app:strokeColor="#F3F8E1"
+        android:backgroundTint="@color/primarybackground"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/available_inventory"
+                    android:layout_width="141dp"
+                    android:layout_height="60dp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/headingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+                <EditText
+                    android:id="@+id/rooms_price"
+                    android:layout_width="141dp"
+                    android:layout_height="60dp"
+                    android:text="6250.00"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/subheadingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/available_inventory2"
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/headingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+                <EditText
+                    android:id="@+id/rooms_price2"
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:text="6250.00"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/subheadingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/available_inventory3"
+                    android:layout_width="141dp"
+                    android:layout_height="60dp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/headingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+                <EditText
+                    android:id="@+id/rooms_price3"
+                    android:layout_width="141dp"
+                    android:layout_height="60dp"
+                    android:text="6250.00"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/subheadingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/available_inventory4"
+                    android:layout_width="142dp"
+                    android:layout_height="60dp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/headingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+                <EditText
+                    android:id="@+id/rooms_price4"
+                    android:layout_width="142dp"
+                    android:layout_height="60dp"
+                    android:text="6250.00"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/subheadingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/available_inventory5"
+                    android:layout_width="143dp"
+                    android:layout_height="60dp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/headingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+                <EditText
+                    android:id="@+id/rooms_price5"
+                    android:layout_width="143dp"
+                    android:layout_height="60dp"
+                    android:text="6250.00"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/subheadingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/available_inventory6"
+                    android:layout_width="147dp"
+                    android:layout_height="60dp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/headingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+                <EditText
+                    android:id="@+id/rooms_price6"
+                    android:layout_width="147dp"
+                    android:layout_height="60dp"
+                    android:text="6250.00"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/subheadingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/available_inventory7"
+                    android:layout_width="145dp"
+                    android:layout_height="60dp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/headingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+                <EditText
+                    android:id="@+id/rooms_price7"
+                    android:layout_width="145dp"
+                    android:layout_height="60dp"
+                    android:text="6250.00"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/subheadingText"
+                    android:background="@drawable/drawble_edit_ratesinventory"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

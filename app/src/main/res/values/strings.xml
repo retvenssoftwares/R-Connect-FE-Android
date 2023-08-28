@@ -1,15 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ChannelManager</string>
 
-    <dimen name="edittextwidth">400dp</dimen>
-    <dimen name="EditTextDemo">275dp</dimen>
-    <dimen name="HeadingSize">21dp</dimen>
-    <dimen name="boldHeading">27dp</dimen>
-    <dimen name="SubHeadingSize">23dp</dimen>
-    <dimen name="subTitle">15dp</dimen>
-    <dimen name="smallText">13dp</dimen>
-    <dimen name="bookingHeading">18dp</dimen>
-    <dimen name="FullEditText">550dp</dimen>
+    <dimen name="edittextwidth">400sp</dimen>
+    <dimen name="EditTextDemo">275sp</dimen>
+    <dimen name="HeadingSize">21sp</dimen>
+    <dimen name="boldHeading">27sp</dimen>
+    <dimen name="SubHeadingSize">23sp</dimen>
+    <dimen name="subTitle">15sp</dimen>
+    <dimen name="smallText">13sp</dimen>
+    <dimen name="bookingHeading">18sp</dimen>
+    <dimen name="FullEditText">550sp</dimen>
+    <dimen name="headingText">18sp</dimen>
+    <dimen name="mediumHeadingText">16sp</dimen>
+    <dimen name="subheadingText">14sp</dimen>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
