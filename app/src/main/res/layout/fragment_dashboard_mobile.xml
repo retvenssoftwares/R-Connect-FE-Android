@@ -410,8 +410,9 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="3dp"
+                    android:layout_marginEnd="25dp"
                     android:layout_marginVertical="9dp"
-                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginStart="12dp"
                     app:cardBackgroundColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/cardDepartures"
@@ -468,6 +469,7 @@
             android:id="@+id/child_booking_fragment_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ll_menu"/>
@@ -538,10 +540,12 @@
                     app:layout_constraintEnd_toEndOf="parent"/>
 
                 <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/avgIncomeLineChart"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_marginHorizontal="12dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginVertical="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/stats"/>
@@ -581,8 +585,8 @@
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/pieChart"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="4dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -913,6 +917,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:scrollbars="none"
             app:layout_constraintTop_toBottomOf="@id/propertyStatistics"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -1022,13 +1027,15 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardBookingStatics"
-                    android:layout_width="110dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="3dp"
                     android:layout_marginVertical="9dp"
                     android:layout_marginStart="12dp"
+                    android:layout_marginEnd="20dp"
                     app:cardBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/cardRevenue"
                     app:layout_constraintBottom_toBottomOf="@id/cardRevenue"
                     app:layout_constraintTop_toTopOf="@id/cardRevenue">
@@ -1060,7 +1067,7 @@
                                 android:textColor="@color/black"
                                 android:textAlignment="center"
                                 android:textSize="12dp"
-                                android:text="Departures"/>
+                                android:text="Booking Statics"/>
 
                         </LinearLayout>
 
