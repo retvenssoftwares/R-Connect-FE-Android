@@ -92,7 +92,7 @@
            </com.google.android.material.card.MaterialCardView>
 
            <LinearLayout
-               android:id="@+id/ll2"
+               android:id="@+id/ll"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:orientation="horizontal"
@@ -338,7 +338,7 @@
                android:id="@+id/view"
                android:layout_width="match_parent"
                android:layout_height="1dp"
-               android:layout_below="@+id/ll2"
+               android:layout_below="@+id/ll"
                android:background="#828282"
                android:layout_alignParentStart="true"
                android:layout_marginStart="20dp"

@@ -38,7 +38,7 @@ class BookingMobileFragment : Fragment() {
         revenueLineChart.setDrawGridBackground(false)
 
         revenueLineChart.data = generateLineData()
-        revenueLineChart.animateX(3000)
+        revenueLineChart.animateX(2000)
 
         val tf = ResourcesCompat.getFont(requireContext(),R.font.barlow_bold)
 
@@ -57,12 +57,12 @@ class BookingMobileFragment : Fragment() {
 
 
 
-//        monthlyRevenueLineChart.description.isEnabled = false
+        monthlyRevenueLineChart.description.isEnabled = false
 
         monthlyRevenueLineChart.setDrawGridBackground(false)
 
         monthlyRevenueLineChart.data = generateLineData()
-        monthlyRevenueLineChart.animateX(3000)
+        monthlyRevenueLineChart.animateX(2000)
 
         val tf1 = ResourcesCompat.getFont(requireContext(),R.font.barlow_bold)
 

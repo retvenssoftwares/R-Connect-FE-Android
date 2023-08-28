@@ -75,9 +75,16 @@ class RevenueMobileFragment : Fragment() {
         revenueLineChart.setVisibleXRangeMaximum(6.5f)
         revenueLineChart.animateX(2000)
 
+        monthlyRevenueLineChart.setDrawGridBackground(false)
+        monthlyRevenueLineChart.axisRight.isEnabled = false
+        monthlyRevenueLineChart.xAxis.isEnabled = false
+        monthlyRevenueLineChart.setVisibleXRangeMaximum(6.5f)
+        monthlyRevenueLineChart.animateX(2000)
+
 //        revenueLineChart.setVisibleYRangeMaximum(65f, YAxis.AxisDependency.LEFT)
 
-        revenueLineChart.data = LineData(lineDataSets)
+        revenueLineChart.data = generateLineData()
+        monthlyRevenueLineChart.data = generateLineData()
     }
 
 
