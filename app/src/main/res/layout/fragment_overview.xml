@@ -10,101 +10,737 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="420dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         >
-        
-        
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:background="@color/primarybackground"
-            android:backgroundTint="@color/primarybackground"
-            app:cardElevation="8dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             >
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="180dp"
+                android:background="@color/primarybackground"
+                android:backgroundTint="@color/primarybackground"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/vector_info"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vector_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
 
-                <ImageView
-                    android:id="@+id/vector_detail_booking"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/vector_detail_booking"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginStart="50dp"
-                    />
+                    <ImageView
+                        android:id="@+id/vector_detail_booking"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/vector_detail_booking"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="40dp"
+                        />
 
-                <TextView
-                    android:id="@+id/booking_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="11"
-                    android:fontFamily="@font/barlow_bold"
-                    android:textSize="60dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="120dp"
-                    android:textColor="@color/textcolor"
-                    />
+                    <TextView
+                        android:id="@+id/booking_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11"
+                        android:fontFamily="@font/barlow_bold"
+                        android:textSize="50dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="70dp"
+                        android:textColor="#464255"
+                        />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/booking_count"
-                    app:layout_constraintStart_toStartOf="@+id/booking_count"
-                    android:text="Bookings"
-                    android:fontFamily="@font/barlow_thin"
-                    android:textFontWeight="700"
-                    android:textColor="#464255"
-                    android:textSize="20dp"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/booking_count"
+                        app:layout_constraintStart_toStartOf="@+id/booking_count"
+                        android:text="Bookings"
+                        android:fontFamily="@font/barlow_thin"
+                        android:textFontWeight="700"
+                        android:textColor="#464255"
+                        android:textSize="20dp"
+                        />
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/vector_increase"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/booking_count"
-                    android:layout_marginBottom="25dp"
-                    />
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/vector_increase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/booking_count"
+                        android:layout_marginBottom="20dp"
+                        />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/booking_count"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginStart="35dp"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/booking_count"
+                        android:layout_marginBottom="22dp"
+                        android:layout_marginStart="35dp"
+                        android:text="8"
+                        android:textColor="#A3A3A3"
+                        android:textSize="16dp"
+                        />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-        </com.google.android.material.card.MaterialCardView>
-        
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="180dp"
+                android:background="@color/primarybackground"
+                android:backgroundTint="@color/primarybackground"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vector_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/vector_detail_booking"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="40dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/lead_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17"
+                        android:fontFamily="@font/barlow_bold"
+                        android:textSize="50dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="70dp"
+                        android:textColor="#464255"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/lead_time"
+                        app:layout_constraintStart_toStartOf="@+id/lead_time"
+                        android:text="Booking Lead Time"
+                        android:fontFamily="@font/barlow_thin"
+                        android:textFontWeight="700"
+                        android:textColor="#464255"
+                        android:textSize="@dimen/smallText"
+                        />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/vector_increase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/lead_time"
+                        android:layout_marginBottom="25dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/lead_time"
+                        android:layout_marginBottom="28dp"
+                        android:layout_marginStart="35dp"
+                        android:text="8"
+                        android:textColor="#A3A3A3"
+                        android:textSize="16dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="180dp"
+                android:background="@color/primarybackground"
+                android:backgroundTint="@color/primarybackground"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vector_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/vector_revenue"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="40dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/revenue_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹60,020"
+                        android:fontFamily="@font/barlow_bold"
+                        android:textSize="22dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="#464255"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/revenue_price"
+                        app:layout_constraintStart_toStartOf="@+id/revenue_price"
+                        android:text="Revenue"
+                        android:fontFamily="@font/barlow_thin"
+                        android:textFontWeight="700"
+                        android:textColor="#464255"
+                        android:textSize="20dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/vector_increase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/revenue_price"
+                        android:layout_marginBottom="30dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/revenue_price"
+                        android:layout_marginBottom="31dp"
+                        android:layout_marginStart="35dp"
+                        android:text="8"
+                        android:textColor="#A3A3A3"
+                        android:textSize="16dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="180dp"
+                android:background="@color/primarybackground"
+                android:backgroundTint="@color/primarybackground"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vector_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/vector_detail_booking"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="40dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/avg_los"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 Nights"
+                        android:fontFamily="@font/barlow_bold"
+                        android:textSize="25dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="#464255"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/avg_los"
+                        app:layout_constraintStart_toStartOf="@+id/avg_los"
+                        android:text="Avg LOS"
+                        android:fontFamily="@font/barlow_thin"
+                        android:textFontWeight="700"
+                        android:textColor="#464255"
+                        android:textSize="20dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/vector_increase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/avg_los"
+                        android:layout_marginBottom="25dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/avg_los"
+                        android:layout_marginBottom="28dp"
+                        android:layout_marginStart="35dp"
+                        android:text="8"
+                        android:textColor="#A3A3A3"
+                        android:textSize="16dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="180dp"
+                android:background="@color/primarybackground"
+                android:backgroundTint="@color/primarybackground"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vector_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/vector_detail_booking"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="40dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/occupancy_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="87.10%"
+                        android:fontFamily="@font/barlow_bold"
+                        android:textSize="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="#464255"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/occupancy_value"
+                        app:layout_constraintStart_toStartOf="@+id/occupancy_value"
+                        android:text="Occupancy"
+                        android:fontFamily="@font/barlow_thin"
+                        android:textFontWeight="700"
+                        android:textColor="#464255"
+                        android:textSize="18dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/vector_increase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/occupancy_value"
+                        android:layout_marginBottom="25dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/occupancy_value"
+                        android:layout_marginBottom="28dp"
+                        android:layout_marginStart="35dp"
+                        android:text="8"
+                        android:textColor="#A3A3A3"
+                        android:textSize="16dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="180dp"
+                android:background="@color/primarybackground"
+                android:backgroundTint="@color/primarybackground"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vector_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/vector_detail_booking"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="50dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/unsold_rooms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8/62"
+                        android:fontFamily="@font/barlow_bold"
+                        android:textSize="35dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="55dp"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="#464255"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/unsold_rooms"
+                        app:layout_constraintStart_toStartOf="@+id/unsold_rooms"
+                        android:text="Unsold Rooms"
+                        android:fontFamily="@font/barlow_thin"
+                        android:textFontWeight="700"
+                        android:textColor="#464255"
+                        android:textSize="@dimen/subTitle"
+                        />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/vector_increase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/unsold_rooms"
+                        android:layout_marginBottom="25dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/unsold_rooms"
+                        android:layout_marginBottom="28dp"
+                        android:layout_marginStart="35dp"
+                        android:text="8"
+                        android:textColor="#A3A3A3"
+                        android:textSize="16dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="180dp"
+                android:background="@color/primarybackground"
+                android:backgroundTint="@color/primarybackground"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vector_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/vector_detail_booking"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="40dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/booking_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹1,111.49"
+                        android:fontFamily="@font/barlow_bold"
+                        android:textSize="25dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="#464255"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/booking_value"
+                        app:layout_constraintStart_toStartOf="@+id/booking_value"
+                        android:text="Bookings"
+                        android:fontFamily="@font/barlow_thin"
+                        android:textFontWeight="700"
+                        android:textColor="#464255"
+                        android:textSize="20dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/vector_increase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/booking_value"
+                        android:layout_marginBottom="25dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/booking_value"
+                        android:layout_marginBottom="28dp"
+                        android:layout_marginStart="35dp"
+                        android:text="8"
+                        android:textColor="#A3A3A3"
+                        android:textSize="16dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="180dp"
+                android:background="@color/primarybackground"
+                android:backgroundTint="@color/primarybackground"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vector_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/vector_detail_booking"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="40dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/incentory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25"
+                        android:fontFamily="@font/barlow_bold"
+                        android:textSize="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="80dp"
+                        android:textColor="#464255"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/incentory"
+                        app:layout_constraintStart_toStartOf="@+id/incentory"
+                        android:text="Out of Incentory"
+                        android:fontFamily="@font/barlow_thin"
+                        android:textFontWeight="700"
+                        android:textColor="#464255"
+                        android:textSize="@dimen/subTitle"
+                        />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
         
     </LinearLayout>
 
