@@ -256,14 +256,74 @@
         app:layout_constraintEnd_toEndOf="parent"
         >
 
+        <LinearLayout
+            android:id="@+id/dynamic_calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:layout_alignBottom="@+id/view"
+            android:layout_marginStart="30dp"
+            >
+
+            <ImageView
+                android:id="@+id/previous_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vector_calender_previous"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/back_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vector_calender_back"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/current_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19 AUGUST 2023"
+                android:layout_gravity="center"
+                android:textColor="#303134"
+                android:layout_marginStart="10dp"
+                android:textSize="@dimen/headingText"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_bold"
+                />
+
+            <ImageView
+                android:id="@+id/next_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vector_calender_next"
+                android:layout_gravity="center"
+                />
+
+            <ImageView
+                android:id="@+id/forward_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/vector_calender_forward"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/calender_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_marginStart="45dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="320dp"
+            android:layout_toEndOf="@id/dynamic_calender"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
@@ -286,8 +346,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/view"
-            android:layout_marginTop="20dp"
-            android:paddingBottom="70dp"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="50dp"
+            android:layout_marginTop="10dp"
             />
 
     </RelativeLayout>
