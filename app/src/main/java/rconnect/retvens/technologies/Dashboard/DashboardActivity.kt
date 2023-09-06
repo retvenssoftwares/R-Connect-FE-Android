@@ -11,6 +11,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import rconnect.retvens.technologies.Authentication.RatesAndInventory.DistributionsRatesFragment
+import rconnect.retvens.technologies.PropertyConfiguration.ConfigurationSettingFragment
 import rconnect.retvens.technologies.R
 import rconnect.retvens.technologies.databinding.ActivityDashboardBinding
 
@@ -70,6 +71,13 @@ class DashboardActivity : AppCompatActivity() {
             } else {
                 bindingTab.drawerLayout.openDrawer(GravityCompat.START)
             }
+        }
+
+
+        bindingTab.editConfigurationText.setOnClickListener {
+            supportActionBar?.setHomeAsUpIndicator(R.drawable.vector_left_arrow)
+            replaceFragment(ConfigurationSettingFragment())
+
         }
 
     }

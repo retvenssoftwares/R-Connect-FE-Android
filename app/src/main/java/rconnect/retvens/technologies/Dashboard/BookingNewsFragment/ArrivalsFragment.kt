@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import rconnect.retvens.technologies.Authentication.DataCollections.BookingDataClass
+import rconnect.retvens.technologies.DataCollections.BookingDataClass
 import rconnect.retvens.technologies.R
 import rconnect.retvens.technologies.databinding.FragmentArrivalsBinding
 

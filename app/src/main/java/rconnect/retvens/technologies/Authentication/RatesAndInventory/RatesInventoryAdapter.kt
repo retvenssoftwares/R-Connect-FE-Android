@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textfield.TextInputEditText
-import rconnect.retvens.technologies.Authentication.DataCollections.BookingDataClass
+import rconnect.retvens.technologies.DataCollections.BookingDataClass
 import rconnect.retvens.technologies.R
 
 class RatesInventoryAdapter(val context: Context, private val itemList: List<RatesInventoryDataClass>) : RecyclerView.Adapter<RatesInventoryAdapter.ViewHolder>() {

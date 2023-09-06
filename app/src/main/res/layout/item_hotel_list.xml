@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:backgroundTint="@color/primarybackground"
+    android:layout_marginStart="20dp"
+    app:cardElevation="8dp"
+    android:layout_marginBottom="10dp"
+    >
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+
+
+
+       <com.google.android.material.imageview.ShapeableImageView
+           android:id="@+id/hotel_img"
+           android:layout_width="match_parent"
+           android:layout_height="150dp"
+           android:src="@drawable/png_hotel1"
+           android:layout_gravity="center"
+
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+       />
+
+
+       <com.google.android.material.card.MaterialCardView
+           android:layout_width="80dp"
+           android:layout_height="30dp"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="10dp"
+           android:backgroundTint="@color/secondary"
+           app:strokeColor="@color/secondary"
+           app:cardCornerRadius="20dp"
+           >
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_gravity="center"
+               android:orientation="horizontal"
+               >
+
+               <TextView
+                   android:id="@+id/room_price"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="$6.00"
+                   android:textColor="@color/primary"
+                   android:fontFamily="@font/poppins_medium"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/smallText"
+                   android:layout_gravity="center"
+                   android:layout_marginStart="10dp"
+                   android:layout_marginTop="1dp"
+                   />
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="/Days"
+                   android:textColor="@color/primarybackground"
+                   android:fontFamily="@font/poppins"
+                   android:textSize="10dp"
+                   android:layout_gravity="center"
+                   />
+
+           </LinearLayout>
+
+       </com.google.android.material.card.MaterialCardView>
+
+       <TextView
+           android:id="@+id/hotel_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@+id/hotel_img"
+           app:layout_constraintStart_toStartOf="parent"
+           android:text="Shahpura House"
+           android:fontFamily="@font/poppins_medium"
+           android:textColor="#393B3A"
+           android:layout_marginTop="10dp"
+           android:textSize="@dimen/mediumHeadingText"
+           android:layout_marginStart="10dp"
+           android:textFontWeight="700"
+           />
+
+
+       <TextView
+           android:id="@+id/hotel_venue"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@+id/hotel_name"
+           app:layout_constraintStart_toStartOf="parent"
+           android:text="Jaipur"
+           android:fontFamily="@font/poppins"
+           android:textColor="#52393B3A"
+           android:textSize="@dimen/subheadingText"
+           android:layout_marginTop="5dp"
+           android:layout_marginStart="10dp"
+           />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@+id/hotel_venue"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:orientation="horizontal"
+           android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+           android:layout_marginBottom="10dp"
+           >
+
+           <TextView
+               android:id="@+id/hotel_rate"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="4.9"
+               android:fontFamily="@font/poppins_medium"
+               android:layout_marginStart="10dp"
+               android:textSize="@dimen/subheadingText"
+               android:textStyle="bold"
+               />
+
+           <com.github.saran2020.dragrating.DragRatingView
+               android:id="@+id/hotel_stars"
+               android:layout_width="80dp"
+               android:layout_height="20dp"
+               app:max_rating="5"
+                android:stepSize="0.1"
+               android:layout_gravity="center"
+               android:layout_marginStart="5dp"
+               />
+
+           <TextView
+               android:id="@+id/total_reviews"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="(3,321)"
+               android:fontFamily="@font/poppins_medium"
+               android:layout_marginStart="10dp"
+               android:textSize="@dimen/subheadingText"
+                android:layout_gravity="center"
+               />
+
+       </LinearLayout>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

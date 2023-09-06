@@ -8,6 +8,7 @@
     <dimen name="SubHeadingSize">23sp</dimen>
     <dimen name="subTitle">15sp</dimen>
     <dimen name="smallText">13sp</dimen>
+    <dimen name="hintSize">10dp</dimen>
     <dimen name="bookingHeading">18sp</dimen>
     <dimen name="FullEditText">550sp</dimen>
     <dimen name="headingText">18sp</dimen>
@@ -31,5 +32,21 @@
     <style name="RoundedCornerImage">
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="PanoramaView">
+        <item name="cornerSize">15%</item>
+        <item name="android:background">@color/primarybackground</item>
+    </style>
+
+    <style name="FullImageDisplay">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <declare-styleable name="PanoramaImageView"><attr format="boolean" name="piv_enablePanoramaMode"/><attr format="boolean" name="piv_invertScrollDirection"/><attr format="boolean" name="piv_show_scrollbar"/></declare-styleable>
+
 
 </resources>

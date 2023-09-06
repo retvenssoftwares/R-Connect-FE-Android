@@ -1,4 +1,4 @@
-package rconnect.retvens.technologies.Authentication.DataCollections
+package rconnect.retvens.technologies.DataCollections
 
 data class BookingDataClass(
     val guestProfile:Int,

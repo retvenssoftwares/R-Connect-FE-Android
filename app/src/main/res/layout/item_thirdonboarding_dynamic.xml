@@ -8,8 +8,8 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/dynamic_Card"
-        android:layout_width="wrap_content"
-        android:layout_height="130dp"
+        android:layout_width="600dp"
+        android:layout_height="170dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,13 +20,19 @@
             android:id="@+id/ll1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_gravity="top"
             >
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/roomType_layout"
-                android:layout_width="150dp"
+                android:layout_width="161dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -50,6 +56,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/montserrat_light"
                     android:inputType="text"
+                    android:textSize="@dimen/subheadingText"
                     android:textColorHint="@color/secondary"
                     android:textColor="@color/secondary" />
 
@@ -57,7 +64,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/maxAdult_layout"
-                android:layout_width="90dp"
+                android:layout_width="110dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -81,6 +88,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/montserrat_light"
                     android:inputType="text"
+                    android:textSize="@dimen/subheadingText"
                     android:textColorHint="@color/secondary"
                     android:textColor="@color/secondary" />
 
@@ -88,7 +96,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/maxChild_layout"
-                android:layout_width="90dp"
+                android:layout_width="110dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -112,6 +120,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/montserrat_light"
                     android:inputType="text"
+                    android:textSize="@dimen/subheadingText"
                     android:textColorHint="@color/secondary"
                     android:textColor="@color/secondary" />
 
@@ -119,7 +128,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/maxOccupancy_layout"
-                android:layout_width="90dp"
+                android:layout_width="150dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -143,14 +152,16 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/montserrat_light"
                     android:inputType="text"
+                    android:textSize="@dimen/subheadingText"
                     android:textColorHint="@color/secondary"
                     android:textColor="@color/secondary" />
-
             </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/inventory_layout"
-                android:layout_width="95dp"
+                android:layout_width="150dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -159,7 +170,6 @@
                 android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/secondary"
-                android:layout_marginTop="30dp"
                 app:boxStrokeWidthFocused="2dp"
                 android:layout_marginEnd="10dp"
                 app:boxCornerRadiusTopStart="10dp"
@@ -175,9 +185,9 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/montserrat_light"
                     android:inputType="text"
+                    android:textSize="@dimen/subheadingText"
                     android:textColorHint="@color/secondary"
                     android:textColor="@color/secondary" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>

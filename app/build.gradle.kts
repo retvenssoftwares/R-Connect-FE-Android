@@ -61,5 +61,19 @@ dependencies {
 
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
-    implementation ("devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4")
+    implementation ("com.github.saran2020:DragRating:2.1.0")
+
+    //Maps
+    implementation ("com.google.maps.android:android-maps-utils:2.3.0")
+    implementation ("com.google.android.gms:play-services-maps:18.1.0")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
+    implementation ("com.google.maps.android:maps-utils-ktx:3.4.0")
+    implementation ("androidx.core:core-ktx:1.10.1")
+
+    //ProgressBar
+    implementation ("com.github.MackHartley:RoundedProgressBar:3.0.0")
+
+
+
+
 }
