@@ -1,8 +1,7 @@
-package rconnect.retvens.technologies.mobile
+package rconnect.retvens.technologies.mobile.hotelDashboard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -10,20 +9,16 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import rconnect.retvens.technologies.R
-import rconnect.retvens.technologies.mobile.sidenav.EditConfigMobileFragment
+import rconnect.retvens.technologies.mobile.hotelDashboard.hotelSideNav.PropertyDashboardFragmentMobile
 
-class MobileDashboardActivity : AppCompatActivity() {
+class HotelActivityMobile : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
 
-    private lateinit var editConfig : TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mobile_dashboard)
-
-        editConfig = findViewById(R.id.editConfiguration)
+        setContentView(R.layout.activity_hotel_mobile)
 
         //setUp drawerLayout
         drawerLayout = findViewById(R.id.drawerLayout)
@@ -34,9 +29,12 @@ class MobileDashboardActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+
+//        toolbar.title = "Sahapura House"
+
+
         // Set the toolbar as the support action bar
         setSupportActionBar(toolbar)
-
 
         // Enable the up button in the action bar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -53,19 +51,14 @@ class MobileDashboardActivity : AppCompatActivity() {
             }
         }
 
-        replaceFragment(DashboardMobileFragment())
+        replaceFragment(PropertyDashboardFragmentMobile())
 
-        editConfig.setOnClickListener {
-            replaceFragment(EditConfigMobileFragment())
-            drawerLayout.closeDrawer(GravityCompat.START)
-        }
     }
     private fun replaceFragment(fragment: Fragment) {
         if (fragment !=null){
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.dashboard_fragment_container,fragment)
+            transaction.replace(R.id.hotel_dashboard_fragment_container,fragment)
             transaction.commit()
         }
     }
-
 }

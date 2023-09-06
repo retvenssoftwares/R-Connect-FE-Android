@@ -62,4 +62,10 @@ dependencies {
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
     implementation ("devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4")
+
+    implementation("com.google.android.gms:play-services:11.6.0")
+
+    // The view calendar library
+    implementation("com.github.JoshHalvorson:calendar-date-range-picker:0.2.0")
+
 }

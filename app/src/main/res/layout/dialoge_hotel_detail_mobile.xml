@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_marginHorizontal="12dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/adminProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/vector_people"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:shapeAppearance="@style/RoundedCornerImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@id/adminProfile"
+        app:layout_constraintBottom_toBottomOf="@id/adminProfile"
+        app:layout_constraintEnd_toStartOf="@id/adminNotification"
+        app:layout_constraintStart_toEndOf="@id/adminProfile">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setup by Admin"
+            android:textSize="16dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:fontFamily="@font/montserrat_bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last edited by - Aman Sharma at 28 August 2023, 12:24 PM "
+            android:textSize="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/secondary"
+            android:fontFamily="@font/montserrat"/>
+    </LinearLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/adminNotification"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/vector_notification"
+        app:tint="@color/black"
+        android:layout_marginEnd="12dp"
+        app:shapeAppearance="@style/RoundedCornerImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/adminProfile"
+        app:layout_constraintTop_toTopOf="@id/adminProfile"/>
+
+    <TextView
+        android:id="@+id/hotelName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Shahpura House"
+        android:textSize="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintEnd_toStartOf="@id/cardEditProperty"
+        app:layout_constraintTop_toBottomOf="@id/adminProfile"
+        app:layout_constraintStart_toStartOf="@id/adminProfile"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEditProperty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="8dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="@color/secondary"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintTop_toTopOf="@id/hotelName"
+        app:layout_constraintStart_toEndOf="@id/hotelName"
+        app:layout_constraintBottom_toBottomOf="@id/hotelName"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dive to Shahpura House"
+            android:textSize="14dp"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="6dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/montserrat_bold"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/coverImg"
+        android:layout_width="230dp"
+        android:layout_height="170dp"
+        android:src="@color/black"
+        app:shapeAppearance="@style/SquareCornerImage_15"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@id/hotelName"
+        app:layout_constraintTop_toBottomOf="@id/hotelName"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@color/black"
+        app:shapeAppearance="@style/SquareCornerImage_15"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/coverImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/img2"
+        app:layout_constraintTop_toBottomOf="@id/hotelName"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@color/black"
+        app:shapeAppearance="@style/SquareCornerImage_15"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/coverImg"
+        app:layout_constraintTop_toBottomOf="@id/img1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/coverImg"/>
+
+    <TextView
+        android:id="@+id/imgCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3+"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintTop_toTopOf="@id/img2"
+        app:layout_constraintBottom_toBottomOf="@id/img2"
+        app:layout_constraintEnd_toEndOf="@id/img2"
+        app:layout_constraintStart_toStartOf="@id/img2"/>
+
+    <LinearLayout
+        android:id="@+id/llh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/coverImg"
+        app:layout_constraintTop_toBottomOf="@id/coverImg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overview"
+                android:textSize="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/primary"
+                android:textFontWeight="600"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail"
+                android:textSize="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/secondary"
+                android:textFontWeight="400"
+                android:fontFamily="@font/montserrat"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="@color/primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facilities"
+                android:textSize="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/secondary"
+                android:textFontWeight="400"
+                android:fontFamily="@font/montserrat"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="@color/primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Review"
+                android:textSize="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/secondary"
+                android:textFontWeight="400"
+                android:fontFamily="@font/montserrat"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="@color/primary"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Shahpura House is a hotel located in the west of New York City. This hotel is very cool with a very beautiful and minimalistic architecture of the room Read more....."
+        android:textSize="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="12dp"
+        android:textColor="@color/secondary"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llh"/>
+
+    <TextView
+        android:id="@+id/locationTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="12dp"
+        android:textColor="@color/secondary"
+        android:textFontWeight="600"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desc"/>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="12dp"
+        android:clickable="true"
+        android:enabled="true"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationTxt"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,5 +15,17 @@
         <item name="android:windowDisablePreview">true</item>
     </style>
 
+    <style name="SquareCornerImage_5">
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="SquareCornerImage_10">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="SquareCornerImage_15">
+        <item name="cornerSize">15%</item>
+    </style>
+
     <style name="Theme.ChannelManager" parent="Base.Theme.ChannelManager" />
 </resources>
