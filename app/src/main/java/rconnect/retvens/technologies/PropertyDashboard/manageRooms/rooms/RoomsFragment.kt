@@ -1,4 +1,4 @@
-package rconnect.retvens.technologies.PropertyDashboard
+package rconnect.retvens.technologies.PropertyDashboard.manageRooms.rooms
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import rconnect.retvens.technologies.PropertyDashboard.manageRooms.amenities.AllAmenitiesData
 import rconnect.retvens.technologies.R
 
-class RoomRatesFragment : Fragment() {
+class RoomsFragment : Fragment() {
 
     lateinit var recyclerView : RecyclerView
-    lateinit var roomRatesAdapter: RoomRatesAdapter
+    lateinit var allRoomsAdapter: AllRoomsAdapter
     var list = ArrayList<AllAmenitiesData>()
 
     override fun onCreateView(
@@ -20,7 +21,7 @@ class RoomRatesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_room_rates, container, false)
+        return inflater.inflate(R.layout.fragment_rooms, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,8 +39,8 @@ class RoomRatesFragment : Fragment() {
         list.add(AllAmenitiesData("Available"))
         list.add(AllAmenitiesData("Sold"))
 
-        roomRatesAdapter = RoomRatesAdapter(list, requireContext())
-        recyclerView.adapter = roomRatesAdapter
-        roomRatesAdapter.notifyDataSetChanged()
+        allRoomsAdapter = AllRoomsAdapter(list, requireContext())
+        recyclerView.adapter = allRoomsAdapter
+        allRoomsAdapter.notifyDataSetChanged()
     }
 }

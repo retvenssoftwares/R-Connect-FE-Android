@@ -1,4 +1,4 @@
-package rconnect.retvens.technologies.PropertyDashboard
+package rconnect.retvens.technologies.PropertyDashboard.manageRooms.amenities
 
 import android.content.Context
 import android.view.LayoutInflater

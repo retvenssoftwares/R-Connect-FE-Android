@@ -9,6 +9,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import rconnect.retvens.technologies.PropertyDashboard.manageRates.ManageRateFragment
+import rconnect.retvens.technologies.PropertyDashboard.manageRooms.ManageRoomFragment
 import rconnect.retvens.technologies.R
 import rconnect.retvens.technologies.databinding.ActivityPropertyDashBoardBinding
 
