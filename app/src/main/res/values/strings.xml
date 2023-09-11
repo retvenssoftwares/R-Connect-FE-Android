@@ -46,7 +46,11 @@
         <item name="cornerSize">10%</item>
     </style>
 
-    <declare-styleable name="PanoramaImageView"><attr format="boolean" name="piv_enablePanoramaMode"/><attr format="boolean" name="piv_invertScrollDirection"/><attr format="boolean" name="piv_show_scrollbar"/></declare-styleable>
+    <declare-styleable name="PanoramaImageView">
+        <attr name="piv_enablePanoramaMode" format="boolean" />
+        <attr name="piv_invertScrollDirection" format="boolean" />
+        <attr name="piv_show_scrollbar" format="boolean" />
+    </declare-styleable>
 
 
 </resources>

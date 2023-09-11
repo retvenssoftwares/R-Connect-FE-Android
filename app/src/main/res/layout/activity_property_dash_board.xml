@@ -47,20 +47,20 @@
         <FrameLayout
             android:id="@+id/propety_dashboard_fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/secondarybackground"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            android:background="@color/secondarybackground"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="340dp"
-        android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:layout_height="match_parent"
         android:background="@color/primarybackground"
         app:itemTextAppearance="@style/NavigationViewStyle"
         app:itemTextColor="#000000"
@@ -114,16 +114,16 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="40dp"
+                            app:strokeColor="@color/white"
                             app:cardCornerRadius="10dp"
-                            android:backgroundTint="#4DACD037"
-                            >
+                            app:cardBackgroundColor="@color/primary_partial">
 
                             <ImageView
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:src="@drawable/vector_dashboard"
                                 android:layout_marginVertical="15dp"
-                                android:layout_marginStart="20dp"
+                                android:layout_marginStart="15dp"
                                 />
 
                             <TextView
@@ -153,21 +153,20 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="5dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            android:visibility="gone"
+                            android:backgroundTint="@color/primary"
                             />
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/manage_rooms_card"
                             android:layout_width="250dp"
                             android:layout_height="60dp"
-                            android:layout_marginTop="10dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="40dp"
-                            app:strokeColor="@color/primarybackground"
+                            app:strokeColor="@color/white"
                             app:cardCornerRadius="10dp"
-                            android:backgroundTint="@color/primarybackground"
+                            app:cardBackgroundColor="@color/white"
                             >
 
                             <ImageView
@@ -205,8 +204,8 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="5dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            android:visibility="gone"
+                            android:backgroundTint="@color/primary"
                             />
 
                         <com.google.android.material.card.MaterialCardView
@@ -216,15 +215,14 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="40dp"
+                            app:strokeColor="@color/white"
                             app:cardCornerRadius="10dp"
-                            android:layout_marginTop="10dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            app:cardBackgroundColor="@color/white"
                             >
 
                             <ImageView
-                                android:layout_width="35dp"
-                                android:layout_height="35dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
                                 android:src="@drawable/vector_rates_inventory"
                                 android:layout_marginVertical="15dp"
                                 android:layout_marginStart="20dp"
@@ -257,26 +255,24 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="5dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            android:visibility="gone"
+                            android:backgroundTint="@color/primary"
                             />
 
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/booking_card"
                             android:layout_width="250dp"
                             android:layout_height="60dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="40dp"
+                            app:strokeColor="@color/white"
                             app:cardCornerRadius="10dp"
-                            android:layout_marginTop="10dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            app:cardBackgroundColor="@color/white"
                             >
 
                             <ImageView
-                                android:layout_width="35dp"
-                                android:layout_height="35dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
                                 android:src="@drawable/vector_booking"
                                 android:layout_marginVertical="15dp"
                                 android:layout_marginStart="20dp"
@@ -309,26 +305,24 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="5dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            android:visibility="gone"
+                            android:backgroundTint="@color/primary"
                             />
 
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/channel_card"
                             android:layout_width="250dp"
                             android:layout_height="60dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="40dp"
+                            app:strokeColor="@color/white"
                             app:cardCornerRadius="10dp"
-                            android:layout_marginTop="10dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            app:cardBackgroundColor="@color/white"
                             >
 
                             <ImageView
-                                android:layout_width="35dp"
-                                android:layout_height="35dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
                                 android:src="@drawable/vector_channellogs"
                                 android:layout_marginVertical="15dp"
                                 android:layout_marginStart="20dp"
@@ -361,26 +355,24 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="5dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            android:visibility="gone"
+                            android:backgroundTint="@color/primary"
                             />
 
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/mapping_card"
                             android:layout_width="250dp"
                             android:layout_height="60dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="40dp"
+                            app:strokeColor="@color/white"
                             app:cardCornerRadius="10dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
-                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="@color/white"
                             >
 
                             <ImageView
-                                android:layout_width="35dp"
-                                android:layout_height="35dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
                                 android:src="@drawable/vector_channel_mapping"
                                 android:layout_marginVertical="15dp"
                                 android:layout_marginStart="20dp"
@@ -413,26 +405,24 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="5dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            android:visibility="gone"
+                            android:backgroundTint="@color/primary"
                             />
 
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/package_card"
                             android:layout_width="250dp"
                             android:layout_height="60dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="40dp"
+                            app:strokeColor="@color/white"
                             app:cardCornerRadius="10dp"
-                            android:layout_marginTop="10dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            app:cardBackgroundColor="@color/white"
                             >
 
                             <ImageView
-                                android:layout_width="35dp"
-                                android:layout_height="35dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
                                 android:src="@drawable/vector_packages"
                                 android:layout_marginVertical="15dp"
                                 android:layout_marginStart="20dp"
@@ -465,26 +455,24 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="5dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            android:visibility="gone"
+                            android:backgroundTint="@color/primary"
                             />
 
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/threshold_card"
                             android:layout_width="250dp"
                             android:layout_height="60dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="40dp"
+                            app:strokeColor="@color/white"
                             app:cardCornerRadius="10dp"
-                            android:layout_marginTop="10dp"
-                            app:strokeColor="@color/primarybackground"
-                            android:backgroundTint="@color/primarybackground"
+                            app:cardBackgroundColor="@color/white"
                             >
 
                             <ImageView
-                                android:layout_width="35dp"
-                                android:layout_height="35dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
                                 android:src="@drawable/vector_ratethreshold"
                                 android:layout_marginVertical="15dp"
                                 android:layout_marginStart="20dp"
@@ -505,6 +493,7 @@
                         </com.google.android.material.card.MaterialCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                 </LinearLayout>
             </LinearLayout>
 

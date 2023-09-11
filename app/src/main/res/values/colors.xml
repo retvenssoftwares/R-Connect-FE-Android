@@ -10,6 +10,7 @@
     <color name="secondarybackground">#F2F2F2</color>
     <color name="pieChart1">#667483</color>
     <color name="pieChart2">#272A3D</color>
+    <color name="primary_partial">#4DACD037</color>
 
 
 </resources>

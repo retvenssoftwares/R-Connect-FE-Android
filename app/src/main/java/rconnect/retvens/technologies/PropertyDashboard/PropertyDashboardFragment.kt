@@ -29,7 +29,6 @@ class PropertyDashboardFragment : Fragment() {
         return bindingTab.root
     }
 
-
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

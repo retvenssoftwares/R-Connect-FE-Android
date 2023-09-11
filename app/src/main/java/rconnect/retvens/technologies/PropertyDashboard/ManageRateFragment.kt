@@ -5,56 +5,66 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import rconnect.retvens.technologies.R
+import rconnect.retvens.technologies.databinding.FragmentManageRateBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ManageRateFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ManageRateFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var bindingTab: FragmentManageRateBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_manage_rate, container, false)
+        bindingTab = FragmentManageRateBinding.inflate(layoutInflater, container, false)
+        return bindingTab.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ManageRateFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ManageRateFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        replaceFragment(RateTypeFragment())
+
+        bindingTab.cardRateTypes.setOnClickListener {
+            replaceFragment(RateTypeFragment())
+            bindingTab.cardRateTypes.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
+            bindingTab.cardRoomRates.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardSeasonsRate.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardTax.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+        }
+
+        bindingTab.cardRoomRates.setOnClickListener {
+            replaceFragment(RoomRatesFragment())
+            bindingTab.cardRateTypes.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardRoomRates.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
+            bindingTab.cardSeasonsRate.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardTax.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+        }
+
+        bindingTab.cardSeasonsRate.setOnClickListener {
+            replaceFragment(BedTypeFragment())
+            bindingTab.cardRateTypes.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardRoomRates.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardSeasonsRate.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
+            bindingTab.cardTax.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+        }
+
+        bindingTab.cardTax.setOnClickListener {
+            replaceFragment(TaxFragment())
+            bindingTab.cardRateTypes.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardRoomRates.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardSeasonsRate.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardTax.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        if (fragment !=null){
+            val transaction = childFragmentManager.beginTransaction()
+            transaction.replace(R.id.manageRateFragmentContainer,fragment)
+            transaction.commit()
+        }
     }
 }

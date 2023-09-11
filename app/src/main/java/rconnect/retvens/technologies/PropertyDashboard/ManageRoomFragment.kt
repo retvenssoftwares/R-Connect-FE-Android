@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import rconnect.retvens.technologies.R
 import rconnect.retvens.technologies.databinding.FragmentManageRoomBinding
 
@@ -27,7 +28,46 @@ class ManageRoomFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        replaceFragment(AminitiesFragment())
 
+        bindingTab.cardAminities.setOnClickListener {
+            replaceFragment(AminitiesFragment())
+            bindingTab.cardAminities.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
+            bindingTab.cardRoomType.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardBedType.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardRoom.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+        }
 
+        bindingTab.cardRoomType.setOnClickListener {
+            replaceFragment(RoomTypeFragment())
+            bindingTab.cardAminities.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardRoomType.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
+            bindingTab.cardBedType.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardRoom.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+        }
+
+        bindingTab.cardBedType.setOnClickListener {
+            replaceFragment(BedTypeFragment())
+            bindingTab.cardAminities.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardRoomType.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardBedType.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
+            bindingTab.cardRoom.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+        }
+
+        bindingTab.cardRoom.setOnClickListener {
+            replaceFragment(RoomsFragment())
+            bindingTab.cardAminities.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardRoomType.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardBedType.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white))
+            bindingTab.cardRoom.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        if (fragment !=null){
+            val transaction = childFragmentManager.beginTransaction()
+            transaction.replace(R.id.manageRoomFragmentContainer,fragment)
+            transaction.commit()
+        }
     }
 }

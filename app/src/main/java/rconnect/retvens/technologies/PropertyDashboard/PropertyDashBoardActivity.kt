@@ -3,8 +3,10 @@ package rconnect.retvens.technologies.PropertyDashboard
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import rconnect.retvens.technologies.R
@@ -24,6 +26,8 @@ class PropertyDashBoardActivity : AppCompatActivity() {
 
 
         replaceFragment(PropertyDashboardFragment())
+        bindingTab.card1.visibility = View.VISIBLE
+        bindingTab.dashboardCard.setCardBackgroundColor(ContextCompat.getColor(applicationContext, R.color.primary_partial))
 
         toggle = ActionBarDrawerToggle(this,bindingTab.drawerLayout,R.string.navigation_drawer_open,R.string.navigation_drawer_close)
         bindingTab.drawerLayout.addDrawerListener(toggle)
@@ -35,7 +39,7 @@ class PropertyDashBoardActivity : AppCompatActivity() {
         // Enable the up button in the action bar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_table_rows_24)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.svg_menu)
         // Set click listener for the up button
 
 
@@ -61,8 +65,21 @@ class PropertyDashBoardActivity : AppCompatActivity() {
             }
         }
 
+        bindingTab.dashboardCard.setOnClickListener {
+            replaceFragment(PropertyDashboardFragment())
+            bindingTab.card1.visibility = View.VISIBLE
+            bindingTab.dashboardCard.setCardBackgroundColor(ContextCompat.getColor(applicationContext, R.color.primary_partial))
+        }
         bindingTab.manageRoomsCard.setOnClickListener {
             replaceFragment(ManageRoomFragment())
+            bindingTab.card2.visibility = View.VISIBLE
+//            bindingTab.drawerLayout.closeDrawer(GravityCompat.START)
+            bindingTab.manageRoomsCard.setCardBackgroundColor(ContextCompat.getColor(applicationContext, R.color.primary_partial))
+        }
+        bindingTab.ratesInventoryCard.setOnClickListener {
+            replaceFragment(ManageRateFragment())
+            bindingTab.card3.visibility = View.VISIBLE
+            bindingTab.ratesInventoryCard.setCardBackgroundColor(ContextCompat.getColor(applicationContext, R.color.primary_partial))
         }
 
     }
@@ -73,5 +90,17 @@ class PropertyDashBoardActivity : AppCompatActivity() {
             transaction.replace(R.id.propety_dashboard_fragment_container,fragment)
             transaction.commit()
         }
+
+        bindingTab.dashboardCard.setCardBackgroundColor(ContextCompat.getColor(applicationContext, R.color.white))
+        bindingTab.manageRoomsCard.setCardBackgroundColor(ContextCompat.getColor(applicationContext, R.color.white))
+        bindingTab.ratesInventoryCard.setCardBackgroundColor(ContextCompat.getColor(applicationContext, R.color.white))
+        bindingTab.card1.visibility = View.GONE
+        bindingTab.card2.visibility = View.GONE
+        bindingTab.card3.visibility = View.GONE
+        bindingTab.card4.visibility = View.GONE
+        bindingTab.card5.visibility = View.GONE
+        bindingTab.card6.visibility = View.GONE
+        bindingTab.card7.visibility = View.GONE
+        bindingTab.card8.visibility = View.GONE
     }
 }
