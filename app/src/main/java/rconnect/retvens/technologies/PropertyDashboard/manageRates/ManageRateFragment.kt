@@ -1,4 +1,4 @@
-package rconnect.retvens.technologies.PropertyDashboard
+package rconnect.retvens.technologies.PropertyDashboard.manageRates
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import rconnect.retvens.technologies.PropertyDashboard.manageRates.rateType.RateTypeFragment
+import rconnect.retvens.technologies.PropertyDashboard.manageRates.roomRates.RoomRatesFragment
+import rconnect.retvens.technologies.PropertyDashboard.manageRates.tax.TaxFragment
+import rconnect.retvens.technologies.PropertyDashboard.manageRooms.bedType.BedTypeFragment
 import rconnect.retvens.technologies.R
 import rconnect.retvens.technologies.databinding.FragmentManageRateBinding
 
