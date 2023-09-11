@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileCoverImg"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:src="@color/primary"
+        android:layout_marginVertical="20dp"
+        android:elevation="16dp"
+        app:shapeAppearance="@style/RoundedCornerImage"
+        app:layout_constraintTop_toTopOf="@id/card"
+        app:layout_constraintBottom_toBottomOf="@id/card"
+        app:layout_constraintStart_toEndOf="@id/card"
+        app:layout_constraintEnd_toEndOf="@id/card"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="18dp"
+        android:layout_margin="20dp"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@color/primary"
+                android:layout_margin="20dp"
+                app:shapeAppearance="@style/RoundedCornerImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/profileImg"
+                app:layout_constraintTop_toTopOf="@id/profileImg"
+                app:layout_constraintStart_toEndOf="@id/profileImg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room 3D Views"
+                    android:layout_marginStart="20dp"
+                    android:textSize="@dimen/HeadingSize"
+                    android:fontFamily="@font/inter_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/textcolor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 days ago"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/inter_light"
+                    android:textColor="@color/textcolor"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reviewText"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text "
+                android:layout_margin="10dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/inter_light"
+                android:textColor="@color/textcolor"
+                app:layout_constraintEnd_toStartOf="@id/domyImg"
+                app:layout_constraintTop_toBottomOf="@id/profileImg"
+                app:layout_constraintStart_toStartOf="@id/profileImg"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="5"
+                android:progressTint="@color/primary"
+                android:layout_marginVertical="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                app:layout_constraintTop_toBottomOf="@id/reviewText"
+                app:layout_constraintStart_toStartOf="@id/reviewText"/>
+
+            <TextView
+                android:id="@+id/views_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.0"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/inter_medium"
+                android:textStyle="bold"
+                android:textColor="@color/textcolor"
+                app:layout_constraintTop_toTopOf="@id/ratingBar"
+                app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+                app:layout_constraintStart_toEndOf="@id/ratingBar"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/domyImg"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:src="@color/primary"
+                android:layout_margin="20dp"
+                android:elevation="16dp"
+                app:shapeAppearance="@style/RoundedCornerImage"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -73,6 +73,8 @@ dependencies {
     //ProgressBar
     implementation ("com.github.MackHartley:RoundedProgressBar:3.0.0")
 
+    // Date Range Picker
+    implementation ("com.github.JoshHalvorson:calendar-date-range-picker:0.2.0")
 
 
 
